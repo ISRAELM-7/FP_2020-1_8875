@@ -2,52 +2,47 @@
 #include <stdlib.h>
 
 int main(int argc, char*argv[]){
-//primero hacer que sea un ciclo para que muestre los valores
+//primero hacer que esto sea un ciclo para que lea cada caracter
 for (int i=1; i<argc; i++){
-//se declara e inicializa una variable pero como si fuera una matriz para que los pueda lea
+//se declara e inicializa los caracteres como si fuera una matriz para que los lea 
 	char x=argv[i][0]; 
-//se utiliza switch en caso de que las condiciones se buscan igualdades
+//Primero son los caracteres porque son mas faciles
+	if (x=='A'){
+		printf("11\n");
+	} else {
+		if (x=='J' || x=='Q' || x=='K'){
+			printf("10\n");
+		} else {
+			//Despues se convierte los caracteres en enteros para su facil manejo
+			x=atoi(argv[i]);
 	switch (x){
-		case '2':
+		case 2:
 		printf("2\n");
 		break;
-		case '3':
+		case 3:
 		printf("3\n");
 		break;
-		case '4':
+		case 4:
 		printf("4\n");
 		break;
-		case '5':
+		case 5:
 		printf("5\n");
 		break;
-		case '6':
+		case 6:
 		printf("6\n");
 		break;
-		case '7':
+		case 7:
 		printf("7\n");
 		break;
-		case '8':
+		case 8:
 		printf("8\n");
 		break;
-		case '9':
+		case 9:
 		printf("9\n");
 		break;
-		case 'J':
+		case 10:
 		printf("10\n");
-		break;
-		case 'Q':
-		printf("10\n");
-		break;
-		case 'K':
-		printf("10\n");
-		break;
-		case 'A':
-		printf("11\n");
-		break;
-		default:
-		printf("10\n"); }
+		break;}
+	} //ya no es necesario agregar un defaault para que no imprima nada 
 }
-//puse en el default el numero 10  ya que no me permite agregar como opcion en el case
-return 0;
-
-}
+} return 0;}
