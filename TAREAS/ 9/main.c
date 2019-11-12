@@ -19,4 +19,5 @@ int main(int argc, char*argv[]){
 //Se transforma a un entero y luego se muestra el valor
 	printf("%d\n", Suma(x));
 return 0;
+//Se tarda un poco en correr el programa 
 }
